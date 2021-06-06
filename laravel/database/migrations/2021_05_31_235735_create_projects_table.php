@@ -20,6 +20,7 @@ class CreateProjectsTable extends Migration
             $table->text('description');
             $table->enum('status', ['ANALISE', 'ORCADO', 'REPROVADO', 'APROVADO', 'REANALISE']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

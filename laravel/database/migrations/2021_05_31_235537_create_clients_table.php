@@ -18,6 +18,7 @@ class CreateClientsTable extends Migration
             $table->string('CPF')->unique();
             $table->string('name');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

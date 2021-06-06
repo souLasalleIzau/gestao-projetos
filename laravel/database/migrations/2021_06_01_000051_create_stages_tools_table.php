@@ -19,6 +19,7 @@ class CreateStagesToolsTable extends Migration
             $table->foreignId('tool_id')->constrained('tools');
             $table->enum('type', ['ENTRADA', 'SAIDA']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
